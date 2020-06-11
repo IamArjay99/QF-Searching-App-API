@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quarantine Facilities API</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header-title">Quarantine Facilities API</h1>
+      <hr />
+      <h2 class="text-center mt-2">Create</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="col-title">Cities</h3>
+          <form method="POST" action="/api/add-city">
+            <div class="form-group">
+              <input
+                type="text"
+                name="cityName"
+                placeholder="Name"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+        <div class="col-md-3">
+          <h3 class="col-title">Rooms</h3>
+          <form method="POST" action="/api/add-room">
+            <div class="form-group">
+              <input
+                type="text"
+                name="roomCityId"
+                placeholder="City Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="roomName"
+                placeholder="Name"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="roomCapacity"
+                placeholder="Max capacity"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+        <div class="col-md-3">
+          <h3 class="col-title">Needs</h3>
+          <form method="POST" action="/api/add-need">
+            <div class="form-group">
+              <input
+                type="text"
+                name="needCityId"
+                placeholder="City Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="needName"
+                placeholder="Name"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="needStock"
+                placeholder="Stock"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+        <div class="col-md-3">
+          <h3 class="col-title">Patients</h3>
+          <form method="POST" action="/api/add-patient">
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientCityId"
+                placeholder="City Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientRoomId"
+                placeholder="Room Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientCodename"
+                placeholder="Codename"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientFullname"
+                placeholder="Fullname"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                name="patientAge"
+                placeholder="Age"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="date"
+                name="patientBirthday"
+                placeholder="Birthday"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientAddress"
+                placeholder="Address"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientContactNumber"
+                placeholder="Contact Number"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientEmail"
+                placeholder="Email"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientStatus"
+                placeholder="Status"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+      </div>
+      <hr />
+      <h2 class="text-center mt-2">Update</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="col-title">Cities</h3>
+          <form method="POST" action="/api/update-city">
+            <div class="form-group">
+              <input
+                type="text"
+                name="cityId"
+                placeholder="Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="cityName"
+                placeholder="Name"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+        <div class="col-md-3">
+          <h3 class="col-title">Rooms</h3>
+          <form method="POST" action="/api/update-room">
+            <div class="form-group">
+              <input
+                type="text"
+                name="roomId"
+                placeholder="Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="roomCityId"
+                placeholder="City Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="roomName"
+                placeholder="Name"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="roomCapacity"
+                placeholder="Max capacity"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+        <div class="col-md-3">
+          <h3 class="col-title">Needs</h3>
+          <form method="POST" action="/api/update-need">
+            <div class="form-group">
+              <input
+                type="text"
+                name="needId"
+                placeholder="Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="needCityId"
+                placeholder="City Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="needName"
+                placeholder="Name"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="needStock"
+                placeholder="Stock"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+        <div class="col-md-3">
+          <h3 class="col-title">Patients</h3>
+          <form method="POST" action="/api/update-patient">
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientId"
+                placeholder="Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientCityId"
+                placeholder="City Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientRoomId"
+                placeholder="Room Id"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientCodename"
+                placeholder="Codename"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientFullname"
+                placeholder="Fullname"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                name="patientAge"
+                placeholder="Age"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="date"
+                name="patientBirthday"
+                placeholder="Birthday"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientAddress"
+                placeholder="Address"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientContactNumber"
+                placeholder="Contact Number"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientEmail"
+                placeholder="Email"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientStatus"
+                placeholder="Status"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+      </div>
+      <hr />
+      <h2 class="text-center mt-2">Delete</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="col-title">Cities</h3>
+          <form method="POST" action="/api/delete-city">
+            <div class="form-group">
+              <input
+                type="text"
+                name="cityId"
+                placeholder="Id"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+        <div class="col-md-3">
+          <h3 class="col-title">Rooms</h3>
+          <form method="POST" action="/api/delete-room">
+            <div class="form-group">
+              <input
+                type="text"
+                name="roomId"
+                placeholder="Id"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+        <div class="col-md-3">
+          <h3 class="col-title">Needs</h3>
+          <form method="POST" action="/api/delete-need">
+            <div class="form-group">
+              <input
+                type="text"
+                name="needId"
+                placeholder="Id"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+        <div class="col-md-3">
+          <h3 class="col-title">Patients</h3>
+          <form method="POST" action="/api/delete-patient">
+            <div class="form-group">
+              <input
+                type="text"
+                name="patientId"
+                placeholder="Id"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn-primary form-control"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
